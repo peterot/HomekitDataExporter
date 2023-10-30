@@ -2,6 +2,35 @@
 
 This is a simple utility application created to store Homekit device properties over time such that historic data can easily be explored in charts and graphs.
 
+## Overview
+
+Homekit is a great for integrating all sorts of devices and for anything not officially supported you can likely use [HomeBridge](https://homebridge.io) to add it. With these tools you can acquire data for all sorts of temperature sensor, light bulbs, thermostats etc. However, there is no easy way to visualise trends in the properties of the devices over time (i.e. changing temperature in each room). 
+
+This app tries to provide a solution by regularly polling Homekit to detect device states and then storing the values in a timeseries database so they can be visualised. The database and visualisation tools which are outlined are InfluxDB and Grafana. These are designed for storing and visualising data at massive scale so should easily cope with a single home.
+
+The app is a Mac Catalyst app which needs to run continuously. If you have a spare Mac Mini or already have a Mac running [HomeBridge](https://homebridge.io) that will be ideal.
+
+Once setup, you can access the Grafana console for anywhere on you local network and can explore all the dashboards you have created.
+
+As soon as a new device is added to a home it should immediately be detectd by the app. Equally if new numeric properties are exposd for a device within Homekit these will start to appear as tags without the need for any changes.
+
+### InfluxDB fields and tags
+
+InfluxDB stores each measurement as a field and value with associated tags. The tags allow filters to be creatd grouping values using different properties. This app extracts all the properties it can for each of the available devices and their measurements in a home.
+
+Example fileds are:
+* Brightness
+* Hue
+* Current Temperature
+* Target Temperature
+
+Example tags are:
+* Home
+* Room
+* Accessory Type
+
+Once the app is installed and running, you can explore these fields in InfluxDB or in the app itself.
+
 ## Setup
 
 ### Installing InfluxDB and Grafana
@@ -44,3 +73,42 @@ The application has not been packaged for distribution on the app store. That sa
 1. For `Team` choose 'FirstName LastName (Personal Team)'
 1. Now build and run the project using the play button at the top of the Xcode window. If not preselected the target should be 'My Mac (Mac Catalyst)`
 1. If all goes well the app window should open
+
+## Using the app
+
+The UI of the app is a bit rough and ready but you probably won't need to spend much time in it. There are just two tabs:
+* Influx Export Settings
+* Home Explorer
+
+### Home Explorer
+
+The 'Home Explorer' allows you to navigate through the set of devices and devce measurements which will be exported to InfluxDB. For each individual measurement you should see the measurment's current value and all the tags and values associated whiche were obtained for the measurement.
+
+### Influx Export Settings
+
+This tab allows the InfluxDB connection to be setup. If you are using the default properties the settings will be:
+* Bucket `mybucket`
+* Organisation `myorganization`
+* Token `myadmintoken`
+* URL `http://localhost:8086`
+
+Once these are added click `Test Connection`. The result will either be `Success` or a listed error message.
+
+If the connection is successful the app will continue to send Homekit measurements to the database every 5 minutes. The sttings are stored locally so should be maintained between restarts of the app. On any restart, as long as the settings are present the app will automatically staret connecting.
+
+## A first graph
+
+Grafana is a very powerful visualisation tool. If it is new to you there are many good tutorials online. When creating charts in Grafana you will use the Flux language to define the queries. This is an example of a query to chart all the thermostats and temperature senors in a home:
+
+`from(bucket: "mybucket")
+  |> range(start: v.timeRangeStart, stop: v.timeRangeStop)
+  |> filter(fn: (r) => r["_field"] == "Current Temperature")
+  |> drop(columns: ["_field", "Accessory", "AccessoryId", "AccessoryType", "Firmware Version", "Home", "Model", "Serial Number", "Manufacturer", "Room", "ServiceType"])
+  |> aggregateWindow(every: v.windowPeriod, fn: mean, createEmpty: false)
+  |> yield(name: "mean")`
+
+The `drop(columns:` line removes all the unnessessary columns so the labels in the chart are nice and simple. 
+
+Instead of creating queries from scratch you may wish to use the data explorer in the InfluxDB console. From there you can export queries and then simply tweak them as neede in Grafana.
+
+That's it really! Enjoy exploring and do share any suggestions, improvements, or interesting visualisations.
