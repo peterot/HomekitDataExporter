@@ -112,3 +112,8 @@ The `drop(columns:` line removes all the unnessessary columns so the labels in t
 Instead of creating queries from scratch you may wish to use the data explorer in the InfluxDB console. From there you can export queries and then simply tweak them as neede in Grafana.
 
 That's it really! Enjoy exploring and do share any suggestions, improvements, or interesting visualisations.
+
+## Example dashboards
+
+![Temperature](./Screenshots/Temperature.png)
+![Lights](./Screenshots/Lights.png)
