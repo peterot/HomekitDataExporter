@@ -1,18 +1,18 @@
 # HomekitDataExporter
 
-This is a simple utility application created to store Homekit device properties over time such that historic data can easily be explored in charts and graphs.
+HomeKit is Apple's solution for managing all of a home's smart accesories. This is a simple utility application created to store HomeKit device properties over time such that historic data can easily be explored in charts and graphs.
 
 ## Overview
 
-Homekit is a great for integrating all sorts of devices and for anything not officially supported you can likely use [HomeBridge](https://homebridge.io) to add it. With these tools you can acquire data for all sorts of temperature sensor, light bulbs, thermostats etc. However, there is no easy way to visualise trends in the properties of the devices over time (i.e. changing temperature in each room). 
+HomeKit is a great for integrating all sorts of devices and for anything not officially supported you can likely use [HomeBridge](https://homebridge.io) to add it. With these tools you can acquire data for all sorts of temperature sensor, light bulbs, thermostats etc. However, there is no easy way to visualise trends in the properties of the devices over time (i.e. changing temperature in each room). 
 
-This app tries to provide a solution by regularly polling Homekit to detect device states and then storing the values in a timeseries database so they can be visualised. The database and visualisation tools which are outlined are InfluxDB and Grafana. These are designed for storing and visualising data at massive scale so should easily cope with a single home.
+This app tries to provide a solution by regularly polling HomeKit to detect device states and then storing the values in a timeseries database so they can be visualised. The database and visualisation tools which are outlined are InfluxDB and Grafana. These are designed for storing and visualising data at massive scale so should easily cope with a single home.
 
 The app is a Mac Catalyst app which needs to run continuously. If you have a spare Mac Mini or already have a Mac running [HomeBridge](https://homebridge.io) that will be ideal.
 
 Once setup, you can access the Grafana console for anywhere on you local network and can explore all the dashboards you have created.
 
-As soon as a new device is added to a home it should immediately be detectd by the app. Equally if new numeric properties are exposd for a device within Homekit these will start to appear as tags without the need for any changes.
+As soon as a new device is added to a home it should immediately be detectd by the app. Equally if new numeric properties are exposd for a device within HomeKit these will start to appear as tags without the need for any changes.
 
 ### InfluxDB fields and tags
 
@@ -94,7 +94,7 @@ This tab allows the InfluxDB connection to be setup. If you are using the defaul
 
 Once these are added click `Test Connection`. The result will either be `Success` or a listed error message.
 
-If the connection is successful the app will continue to send Homekit measurements to the database every 5 minutes. The sttings are stored locally so should be maintained between restarts of the app. On any restart, as long as the settings are present the app will automatically staret connecting.
+If the connection is successful the app will continue to send HomeKit measurements to the database every 5 minutes. The sttings are stored locally so should be maintained between restarts of the app. On any restart, as long as the settings are present the app will automatically staret connecting.
 
 ## A first graph
 
@@ -116,4 +116,5 @@ That's it really! Enjoy exploring and do share any suggestions, improvements, or
 ## Example dashboards
 
 ![Temperature](./Screenshots/Temperature.png)
+![Humidity](./Screenshots/Humidity.png)
 ![Lights](./Screenshots/Lights.png)
