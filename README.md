@@ -35,7 +35,7 @@ Once the app is installed and running, you can explore these fields in InfluxDB 
 
 ### Installing InfluxDB and Grafana
 
-The application can send data to any InfluxDB instance. The following steps indicate how to set this up using Docker containers for both the InfluxDB and Grafana
+The application has been configured to send data to any InfluxDB V2+ instance. The following steps indicate how to set this up using Docker containers for both the InfluxDB and Grafana
 
 1. Install [Docker](https://docs.docker.com/desktop/install/mac-install/)
 1. Install [Homebrew](https://docs.brew.sh/Installation) - while not strictly neccessary Homebrew makes package management much simpler.
