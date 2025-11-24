@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 90;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -73,25 +73,19 @@
 /* Begin PBXFrameworksBuildPhase section */
 		08237A232AD2E99D0036A4D6 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
 			files = (
 				08786EAB2AD46D4A00EB2A97 /* InfluxDBSwift in Frameworks */,
 			);
-			runOnlyForDeploymentPostprocessing = 0;
 		};
 		08237A332AD2E99E0036A4D6 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
 			files = (
 			);
-			runOnlyForDeploymentPostprocessing = 0;
 		};
 		08237A3D2AD2E99E0036A4D6 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
 			files = (
 			);
-			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
@@ -225,8 +219,6 @@
 			);
 			buildRules = (
 			);
-			dependencies = (
-			);
 			name = HomekitDataExporter;
 			packageProductDependencies = (
 				08786EAA2AD46D4A00EB2A97 /* InfluxDBSwift */,
@@ -279,7 +271,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1500;
-				LastUpgradeCheck = 1500;
+				LastUpgradeCheck = 1640;
 				TargetAttributes = {
 					08237A252AD2E99D0036A4D6 = {
 						CreatedOnToolsVersion = 15.0;
@@ -295,7 +287,6 @@
 				};
 			};
 			buildConfigurationList = 08237A212AD2E99D0036A4D6 /* Build configuration list for PBXProject "HomekitDataExporter" */;
-			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -306,6 +297,7 @@
 			packageReferences = (
 				08AFB45E2AD44692007D784A /* XCRemoteSwiftPackageReference "influxdb-client-swift" */,
 			);
+			preferredProjectObjectVersion = 90;
 			productRefGroup = 08237A272AD2E99D0036A4D6 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -320,33 +312,26 @@
 /* Begin PBXResourcesBuildPhase section */
 		08237A242AD2E99D0036A4D6 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
 			files = (
 				08237A312AD2E99E0036A4D6 /* Preview Assets.xcassets in Resources */,
 				08237A2E2AD2E99E0036A4D6 /* Assets.xcassets in Resources */,
 			);
-			runOnlyForDeploymentPostprocessing = 0;
 		};
 		08237A342AD2E99E0036A4D6 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
 			files = (
 			);
-			runOnlyForDeploymentPostprocessing = 0;
 		};
 		08237A3E2AD2E99E0036A4D6 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
 			files = (
 			);
-			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		08237A222AD2E99D0036A4D6 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
 			files = (
 				08237A2C2AD2E99D0036A4D6 /* HomeView.swift in Sources */,
 				08237A552AD4132A0036A4D6 /* HomeService.swift in Sources */,
@@ -362,24 +347,19 @@
 				08786EB72ADA991600EB2A97 /* AccessoryMeasurementView.swift in Sources */,
 				08237A572AD416C20036A4D6 /* AccessoriesView.swift in Sources */,
 			);
-			runOnlyForDeploymentPostprocessing = 0;
 		};
 		08237A322AD2E99E0036A4D6 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
 			files = (
 				08237A3B2AD2E99E0036A4D6 /* HomekitDataExporterTests.swift in Sources */,
 			);
-			runOnlyForDeploymentPostprocessing = 0;
 		};
 		08237A3C2AD2E99E0036A4D6 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
 			files = (
 				08237A452AD2E99E0036A4D6 /* HomekitDataExporterUITests.swift in Sources */,
 				08237A472AD2E99E0036A4D6 /* HomekitDataExporterUITestsLaunchTests.swift in Sources */,
 			);
-			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
@@ -397,7 +377,7 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		08237A482AD2E99E0036A4D6 /* Debug */ = {
+		08237A482AD2E99E0036A4D6 /* Debug configuration for PBXProject "HomekitDataExporter" */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -432,6 +412,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = 8H55U3AD7K;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;
@@ -461,7 +442,7 @@
 			};
 			name = Debug;
 		};
-		08237A492AD2E99E0036A4D6 /* Release */ = {
+		08237A492AD2E99E0036A4D6 /* Release configuration for PBXProject "HomekitDataExporter" */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -496,6 +477,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = 8H55U3AD7K;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;
@@ -518,7 +500,7 @@
 			};
 			name = Release;
 		};
-		08237A4B2AD2E99E0036A4D6 /* Debug */ = {
+		08237A4B2AD2E99E0036A4D6 /* Debug configuration for PBXNativeTarget "HomekitDataExporter" */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -527,7 +509,6 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"HomekitDataExporter/Preview Content\"";
-				DEVELOPMENT_TEAM = 8H55U3AD7K;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHomeKitUsageDescription = "Access to request device properties ";
@@ -551,7 +532,7 @@
 			};
 			name = Debug;
 		};
-		08237A4C2AD2E99E0036A4D6 /* Release */ = {
+		08237A4C2AD2E99E0036A4D6 /* Release configuration for PBXNativeTarget "HomekitDataExporter" */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -560,7 +541,6 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"HomekitDataExporter/Preview Content\"";
-				DEVELOPMENT_TEAM = 8H55U3AD7K;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHomeKitUsageDescription = "Access to request device properties ";
@@ -584,14 +564,12 @@
 			};
 			name = Release;
 		};
-		08237A4E2AD2E99E0036A4D6 /* Debug */ = {
+		08237A4E2AD2E99E0036A4D6 /* Debug configuration for PBXNativeTarget "HomekitDataExporterTests" */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 8H55U3AD7K;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				MARKETING_VERSION = 1.0;
@@ -604,14 +582,12 @@
 			};
 			name = Debug;
 		};
-		08237A4F2AD2E99E0036A4D6 /* Release */ = {
+		08237A4F2AD2E99E0036A4D6 /* Release configuration for PBXNativeTarget "HomekitDataExporterTests" */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 8H55U3AD7K;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				MARKETING_VERSION = 1.0;
@@ -624,13 +600,11 @@
 			};
 			name = Release;
 		};
-		08237A512AD2E99E0036A4D6 /* Debug */ = {
+		08237A512AD2E99E0036A4D6 /* Debug configuration for PBXNativeTarget "HomekitDataExporterUITests" */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 8H55U3AD7K;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = uk.pete.HomekitDataExporterUITests;
@@ -642,13 +616,11 @@
 			};
 			name = Debug;
 		};
-		08237A522AD2E99E0036A4D6 /* Release */ = {
+		08237A522AD2E99E0036A4D6 /* Release configuration for PBXNativeTarget "HomekitDataExporterUITests" */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 8H55U3AD7K;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = uk.pete.HomekitDataExporterUITests;
@@ -666,37 +638,33 @@
 		08237A212AD2E99D0036A4D6 /* Build configuration list for PBXProject "HomekitDataExporter" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				08237A482AD2E99E0036A4D6 /* Debug */,
-				08237A492AD2E99E0036A4D6 /* Release */,
+				08237A482AD2E99E0036A4D6 /* Debug configuration for PBXProject "HomekitDataExporter" */,
+				08237A492AD2E99E0036A4D6 /* Release configuration for PBXProject "HomekitDataExporter" */,
 			);
-			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 		08237A4A2AD2E99E0036A4D6 /* Build configuration list for PBXNativeTarget "HomekitDataExporter" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				08237A4B2AD2E99E0036A4D6 /* Debug */,
-				08237A4C2AD2E99E0036A4D6 /* Release */,
+				08237A4B2AD2E99E0036A4D6 /* Debug configuration for PBXNativeTarget "HomekitDataExporter" */,
+				08237A4C2AD2E99E0036A4D6 /* Release configuration for PBXNativeTarget "HomekitDataExporter" */,
 			);
-			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 		08237A4D2AD2E99E0036A4D6 /* Build configuration list for PBXNativeTarget "HomekitDataExporterTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				08237A4E2AD2E99E0036A4D6 /* Debug */,
-				08237A4F2AD2E99E0036A4D6 /* Release */,
+				08237A4E2AD2E99E0036A4D6 /* Debug configuration for PBXNativeTarget "HomekitDataExporterTests" */,
+				08237A4F2AD2E99E0036A4D6 /* Release configuration for PBXNativeTarget "HomekitDataExporterTests" */,
 			);
-			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 		08237A502AD2E99E0036A4D6 /* Build configuration list for PBXNativeTarget "HomekitDataExporterUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				08237A512AD2E99E0036A4D6 /* Debug */,
-				08237A522AD2E99E0036A4D6 /* Release */,
+				08237A512AD2E99E0036A4D6 /* Debug configuration for PBXNativeTarget "HomekitDataExporterUITests" */,
+				08237A522AD2E99E0036A4D6 /* Release configuration for PBXNativeTarget "HomekitDataExporterUITests" */,
 			);
-			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
