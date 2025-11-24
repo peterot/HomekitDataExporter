@@ -13,10 +13,10 @@ struct RoomView: View {
                 Text("Rooms")
             }) {
                 ForEach(model.rooms.sorted(by:  { $0.name < $1.name }), id: \.uniqueIdentifier) { room in
-                    NavigationLink(value: room){
+                    NavigationLink {
+                        AccessoriesView(homeId: homeId, roomId: room.uniqueIdentifier, model: model)
+                    } label: {
                         Text("\(room.name)")
-                    }.navigationDestination(for: HMRoom.self) {
-                        AccessoriesView(homeId: homeId, roomId: $0.uniqueIdentifier, model: model)
                     }
                 }
             }

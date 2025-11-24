@@ -13,10 +13,10 @@ struct AccessoryMeasurementView: View {
                 Text("Measurements")
             }) {
                 ForEach(model.accessoryData.sorted(by:  { $0.measurement < $1.measurement }), id: \.measurement) { accessoryData in
-                    NavigationLink(value: accessoryData){
+                    NavigationLink {
+                        AccessoryDataView(accessoryData: accessoryData)
+                    } label: {
                         Text("\(accessoryData.measurement)")
-                    }.navigationDestination(for: AccessoryData.self) {
-                        AccessoryDataView(accessoryData: $0)
                     }
                 }
             }

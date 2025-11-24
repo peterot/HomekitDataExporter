@@ -13,11 +13,10 @@ struct AccessoriesView: View {
                 Text("Accessories")
             }) {
                 ForEach(model.accessories.sorted(by:  { $0.name < $1.name }), id: \.uniqueIdentifier) { accessory in
-                    NavigationLink(value: accessory){
+                    NavigationLink {
+                        AccessoryMeasurementView(homeId: homeId, accessoryId: accessory.uniqueIdentifier, model: model)
+                    } label: {
                         Text("\(accessory.name)")
-                    }
-                    .navigationDestination(for: HMAccessory.self) {
-                        AccessoryMeasurementView(homeId: homeId, accessoryId: $0.uniqueIdentifier, model: model)
                     }
                 }
             }
