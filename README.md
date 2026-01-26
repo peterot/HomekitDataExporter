@@ -214,6 +214,9 @@ from(bucket: "mybucket")
 - The credentials in `docker-compose.yml` are **development defaults** — change them for any real deployment.
 - Don’t expose InfluxDB or Grafana to the internet without authentication.
 - Consider placing secrets in `docker-compose.override.yml` (not committed).
+- Pre-commit secrets scan (Gitleaks):
+  - Install hooks: `pipx install pre-commit && pre-commit install`
+  - Run manually: `pre-commit run --all-files`
 
 # 🗄️ Backups & Upgrades
 

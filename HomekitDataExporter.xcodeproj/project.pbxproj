@@ -509,6 +509,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"HomekitDataExporter/Preview Content\"";
+				DEVELOPMENT_TEAM = 8H55U3AD7K;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHomeKitUsageDescription = "Access to request device properties ";
@@ -541,6 +542,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"HomekitDataExporter/Preview Content\"";
+				DEVELOPMENT_TEAM = 8H55U3AD7K;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHomeKitUsageDescription = "Access to request device properties ";
